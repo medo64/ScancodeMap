@@ -80,6 +80,7 @@
 51   Keypad 3 PageDn 
 52   Keypad 0 Insert
 53   Keypad . Delete
+54   Sys Req
 56   Europe2
 57   F11
 58   F12
