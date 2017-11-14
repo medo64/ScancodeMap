@@ -1,5 +1,6 @@
 ﻿//Josip Medved <jmedved@jmedved.com>   www.medo64.com
 
+//2017-11-13: Fixed CallbackOnCollectedDelegate exception due to GC collecting callback function.
 //2017-11-12: Initial version.
 
 
@@ -28,9 +29,12 @@ namespace Medo.Win32 {
         /// <exception cref="Win32Exception"></exception>
         public void Hook() {
             if (this.HookHandle.IsInvalid || this.HookHandle.IsClosed) {
+                if (this.LowLevelKeyboardProcedure == null) { //needs to be in variable so GC doesn't collect it
+                    this.LowLevelKeyboardProcedure = new NativeMethods.LowLevelKeyboardProc(this.KeyboardHookProc);
+                }
                 this.HookHandle = NativeMethods.SetWindowsHookEx(
                     idHook: NativeMethods.WH_KEYBOARD_LL,
-                    lpfn: new NativeMethods.LowLevelKeyboardProc(this.KeyboardHookProc),
+                    lpfn: this.LowLevelKeyboardProcedure,
                     hMod: IntPtr.Zero,
                     dwThreadId: 0);
 
@@ -59,6 +63,7 @@ namespace Medo.Win32 {
 
 
         private NativeMethods.WindowsHookSafeHandle HookHandle = new NativeMethods.WindowsHookSafeHandle();
+        private NativeMethods.LowLevelKeyboardProc LowLevelKeyboardProcedure;
 
         private IntPtr KeyboardHookProc(Int32 nCode, IntPtr wParam, IntPtr lParam) {
             var keyboardHookStruct = (NativeMethods.KBDLLHOOKSTRUCT)Marshal.PtrToStructure(lParam, typeof(NativeMethods.KBDLLHOOKSTRUCT));
@@ -96,6 +101,9 @@ namespace Medo.Win32 {
         /// Disposes resources in use.
         /// </summary>
         protected virtual void Dispose(bool disposing) {
+            if (disposing) {
+                this.LowLevelKeyboardProcedure = null; //let GC collect it now
+            }
             this.Unhook();
         }
 
