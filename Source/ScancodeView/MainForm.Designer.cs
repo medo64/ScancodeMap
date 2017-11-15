@@ -72,6 +72,7 @@
             this.txtKey.Size = new System.Drawing.Size(180, 22);
             this.txtKey.TabIndex = 1;
             this.txtKey.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtKey.UseMnemonic = false;
             // 
             // txtScancodeHex
             // 
@@ -84,6 +85,7 @@
             this.txtScancodeHex.Size = new System.Drawing.Size(87, 22);
             this.txtScancodeHex.TabIndex = 3;
             this.txtScancodeHex.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtScancodeHex.UseMnemonic = false;
             // 
             // txtScancodeDec
             // 
@@ -96,6 +98,7 @@
             this.txtScancodeDec.Size = new System.Drawing.Size(87, 22);
             this.txtScancodeDec.TabIndex = 4;
             this.txtScancodeDec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtScancodeDec.UseMnemonic = false;
             // 
             // txtVirtualKeyCodeHex
             // 
@@ -108,6 +111,7 @@
             this.txtVirtualKeyCodeHex.Size = new System.Drawing.Size(87, 22);
             this.txtVirtualKeyCodeHex.TabIndex = 6;
             this.txtVirtualKeyCodeHex.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtVirtualKeyCodeHex.UseMnemonic = false;
             // 
             // txtVirtualKeyCodeDec
             // 
@@ -120,6 +124,7 @@
             this.txtVirtualKeyCodeDec.Size = new System.Drawing.Size(87, 22);
             this.txtVirtualKeyCodeDec.TabIndex = 7;
             this.txtVirtualKeyCodeDec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtVirtualKeyCodeDec.UseMnemonic = false;
             // 
             // MainForm
             // 
