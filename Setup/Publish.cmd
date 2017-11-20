@@ -2,7 +2,7 @@
 SETLOCAL EnableDelayedExpansion
 
 SET                   NAME="ScancodeMap"
-SET                  FILES="..\Binaries\ScancodeView.exe" "..\LICENSE.md"
+SET                  FILES="..\Binaries\ScancodeMap.exe" "..\Binaries\ScancodeMapExec.exe" "..\Binaries\ScancodeView.exe" "..\LICENSE.md" "..\README.md"
 SET        SOURCE_SOLUTION="..\Source\ScancodeMap.sln"
 SET       SOURCE_INNOSETUP=".\ScancodeMap.iss"
 

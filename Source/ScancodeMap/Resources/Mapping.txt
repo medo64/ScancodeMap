@@ -1,0 +1,153 @@
+﻿#39   Space
+
+1E   a A
+30   b B
+2E   c C
+20   d D
+12   e E
+21   f F
+22   g G
+23   h H
+17   i I
+24   j J
+25   k K
+26   l L
+32   m M
+31   n N
+18   o O
+19   p P
+10   q Q
+1F   s S
+13   r R
+14   t T
+16   u U
+2F   v V
+11   w W
+15   y Y
+2C   z Z
+2D   x X
+
+02   1 !
+03   2 @
+04   3 #
+05   4 $
+06   5 %
+07   6 ^
+08   7 &
+09   8 *
+0A   9 (
+0B   0 )
+
+0C   - _
+0D   = +
+1A   [ {
+1B   ] }
+27   ; :
+28   ' "
+29   ` ~
+2B   \ |
+33   , <
+34   . >
+35   / ?
+
+3B   F1
+3C   F2
+3D   F3
+3E   F4
+3F   F5
+40   F6
+41   F7
+42   F8
+43   F9
+44   F10
+57   F11
+58   F12
+64   F13
+65   F14
+66   F15
+67   F16
+68   F17
+69   F18
+6A   F19
+6B   F20
+6C   F21
+6D   F22
+6E   F23
+76   F24
+
+52   Keypad 0 Insert
+4F   Keypad 1 End
+50   Keypad 2 Down
+51   Keypad 3 PageDn 
+4B   Keypad 4 Left
+4C   Keypad 5
+4D   Keypad 6 Right
+47   Keypad 7 Home
+48   Keypad 8 Up
+49   Keypad 9 PageUp
+53   Keypad . Delete
+4E   Keypad +
+4A   Keypad -
+37   Keypad *
+E035 Keypad /
+59   Keypad =
+E01C Keypad Enter
+
+01   Escape
+0F   Tab
+0E   Backspace
+1C   Return
+
+2A   Left Shift
+E036 Right Shift
+1D   Left Control
+E01D Right Ctrl
+38   Left Alt
+E038 Right Alt
+E05B Left Windows
+E05C Right Windows
+E05D Context Menu
+
+E04B Left Arrow
+E04D Right Arrow
+E048 Up Arrow
+E050 Down Arrow
+E049 Page Up
+E051 Page Down
+E047 Home
+E04F End
+E052 Insert
+E053 Delete
+
+3A   Caps Lock
+E045 Num Lock
+46   Scroll Lock
+E037 Print Screen
+54   Sys Req
+45   Pause
+56   Europe2
+
+E022 Media Play/Pause
+E024 Media Stop
+E010 Media Previous
+E019 Media Next
+E06D Media Select
+E020 Volume Mute
+E02E Volume Down
+E030 Volume Up
+
+E06B My Computer
+E06C Mail
+E021 Calculator
+
+E032 WWW Home
+E065 WWW Search
+E066 WWW Favorites
+E067 WWW Refresh
+E068 WWW Stop
+E06A WWW Back
+E069 WWW Forward
+
+E05E System Power
+E05F System Sleep
+E063 System Wake

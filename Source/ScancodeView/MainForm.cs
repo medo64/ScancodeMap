@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ScancodeMap;
 
 namespace ScancodeView {
     internal partial class MainForm : Form {
@@ -34,7 +35,7 @@ namespace ScancodeView {
             if (e.IsPressed == false) {
                 var scanCode = (e.IsExtended ? 0xE000 : 0) | e.ScanCode;
 
-                txtKey.Text = Mapping.GetText(scanCode);
+                txtKey.Text = ScancodeKey.GetText(scanCode);
 
                 txtScancodeHex.Text = "0x" + (e.IsExtended ? scanCode.ToString("X4") : scanCode.ToString("X2"));
                 txtScancodeDec.Text = scanCode.ToString();

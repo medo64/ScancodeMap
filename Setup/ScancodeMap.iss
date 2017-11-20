@@ -1,8 +1,8 @@
-#define AppName        GetStringFileInfo('..\Binaries\ScancodeView.exe', 'ProductName')
-#define AppVersion     GetStringFileInfo('..\Binaries\ScancodeView.exe', 'ProductVersion')
-#define AppFileVersion GetStringFileInfo('..\Binaries\ScancodeView.exe', 'FileVersion')
-#define AppCompany     GetStringFileInfo('..\Binaries\ScancodeView.exe', 'CompanyName')
-#define AppCopyright   GetStringFileInfo('..\Binaries\ScancodeView.exe', 'LegalCopyright')
+#define AppName        GetStringFileInfo('..\Binaries\ScancodeMap.exe', 'ProductName')
+#define AppVersion     GetStringFileInfo('..\Binaries\ScancodeMap.exe', 'ProductVersion')
+#define AppFileVersion GetStringFileInfo('..\Binaries\ScancodeMap.exe', 'FileVersion')
+#define AppCompany     GetStringFileInfo('..\Binaries\ScancodeMap.exe', 'CompanyName')
+#define AppCopyright   GetStringFileInfo('..\Binaries\ScancodeMap.exe', 'LegalCopyright')
 #define AppBase        LowerCase(StringChange(AppName, ' ', ''))
 #define AppSetupFile   AppBase + StringChange(AppVersion, '.', '')
 
@@ -52,18 +52,20 @@ SetupWindowTitle=Setup {#AppName} {#AppVersionEx}
 BeveledLabel=medo64.com
 
 
-[Tasks]
-Name: extension_psafe3;  GroupDescription: "Associate additional extension:";  Description: "Password Safe 3.x (.psafe3)";  Flags: unchecked;
-
-
 [Files]
-Source: "ScancodeView.exe";  DestDir: "{app}";                            Flags: ignoreversion;
-Source: "ScancodeView.pdb";  DestDir: "{app}";                            Flags: ignoreversion;
-Source: "..\LICENSE.md";     DestDir: "{app}";  DestName: "License.txt";  Flags: overwritereadonly uninsremovereadonly;  Attribs: readonly;
+Source: "ScancodeMap.exe";      DestDir: "{app}";                            Flags: ignoreversion;
+Source: "ScancodeMap.pdb";      DestDir: "{app}";                            Flags: ignoreversion;
+Source: "ScancodeMapExec.exe";  DestDir: "{app}";                            Flags: ignoreversion;
+Source: "ScancodeMapExec.pdb";  DestDir: "{app}";                            Flags: ignoreversion;
+Source: "ScancodeView.exe";     DestDir: "{app}";                            Flags: ignoreversion;
+Source: "ScancodeView.pdb";     DestDir: "{app}";                            Flags: ignoreversion;
+Source: "..\LICENSE.md";        DestDir: "{app}";  DestName: "License.txt";  Flags: overwritereadonly uninsremovereadonly;  Attribs: readonly;
+Source: "..\README.md";         DestDir: "{app}";  DestName: "ReadMe.txt";   Flags: overwritereadonly uninsremovereadonly;  Attribs: readonly;
 
 
 [Icons]
-Name: "{userstartmenu}\Scancode View"; Filename: "{app}\ScancodeView.exe"
+Name: "{userstartmenu}\Scancode Map";   Filename: "{app}\ScancodeMap.exe"
+Name: "{userstartmenu}\Scancode View";  Filename: "{app}\ScancodeView.exe"
 
 
 [Registry]
@@ -71,7 +73,8 @@ Root: HKCU; Subkey: "Software\Josip Medved\ScancodeMap";  ValueType: dword; Valu
 Root: HKCU; Subkey: "Software\Josip Medved";                                                                        Flags: uninsdeletekeyifempty
 
 [Run]
-Filename: "{app}\ScancodeView.exe";  Flags: postinstall nowait skipifsilent runasoriginaluser;                      Description: "Launch Scancode Viewer now";
+Filename: "{app}\ScancodeMap.exe";   Flags: postinstall nowait skipifsilent runasoriginaluser;                      Description: "Launch application";
+Filename: "{app}\ScancodeView.exe";  Flags: postinstall nowait skipifsilent runasoriginaluser;                      Description: "Launch Scancode Viewer";
 Filename: "{app}\ReadMe.txt";        Flags: postinstall nowait skipifsilent runasoriginaluser unchecked shellexec;  Description: "View ReadMe.txt";
 
 

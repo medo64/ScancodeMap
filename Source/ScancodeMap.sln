@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScancodeView", "ScancodeView\ScancodeView.csproj", "{56977017-2B8D-4D35-ABAF-E3CC22571C3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScancodeMap", "ScancodeMap\ScancodeMap.csproj", "{2F65CCC5-20E6-4F7D-A0D1-033AF206A9F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScancodeMapExec", "ScancodeMapExec\ScancodeMapExec.csproj", "{F359EA9F-71F4-4522-83AE-3431C065BAAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{56977017-2B8D-4D35-ABAF-E3CC22571C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56977017-2B8D-4D35-ABAF-E3CC22571C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56977017-2B8D-4D35-ABAF-E3CC22571C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F65CCC5-20E6-4F7D-A0D1-033AF206A9F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F65CCC5-20E6-4F7D-A0D1-033AF206A9F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F65CCC5-20E6-4F7D-A0D1-033AF206A9F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F65CCC5-20E6-4F7D-A0D1-033AF206A9F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F359EA9F-71F4-4522-83AE-3431C065BAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F359EA9F-71F4-4522-83AE-3431C065BAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F359EA9F-71F4-4522-83AE-3431C065BAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F359EA9F-71F4-4522-83AE-3431C065BAAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
