@@ -74,7 +74,7 @@ Root: HKCU; Subkey: "Software\Josip Medved";                                    
 
 [Run]
 Filename: "{app}\ScancodeMap.exe";   Flags: postinstall nowait skipifsilent runasoriginaluser;                      Description: "Launch application";
-Filename: "{app}\ScancodeView.exe";  Flags: postinstall nowait skipifsilent runasoriginaluser;                      Description: "Launch Scancode Viewer";
+Filename: "{app}\ScancodeView.exe";  Flags: postinstall nowait skipifsilent runasoriginaluser unchecked;            Description: "Launch Scancode Viewer";
 Filename: "{app}\ReadMe.txt";        Flags: postinstall nowait skipifsilent runasoriginaluser unchecked shellexec;  Description: "View ReadMe.txt";
 
 
