@@ -11,6 +11,8 @@ namespace ScancodeMap {
             btnScancodeFrom.Font = new Font(this.Font.FontFamily, this.Font.SizeInPoints * 0.75F);
             btnScancodeTo.Font = new Font(this.Font.FontFamily, this.Font.SizeInPoints * 0.75F);
 
+            cmbScancodeTo.Items.Insert(0, new ScancodeKey(0));
+
             this.Text = "New";
         }
 
@@ -36,7 +38,7 @@ namespace ScancodeMap {
         private void cmbScancode_SelectedValueChanged(object sender, EventArgs e) {
             btnOK.Enabled = (cmbScancodeFrom.SelectedKey != null)
                          && (cmbScancodeTo.SelectedKey != null)
-                         && !(cmbScancodeFrom.SelectedKey.Equals (cmbScancodeTo.SelectedKey));
+                         && !(cmbScancodeFrom.SelectedKey.Equals(cmbScancodeTo.SelectedKey));
         }
 
         private void btnScancodeFrom_Click(object sender, EventArgs e) {

@@ -69,7 +69,9 @@ namespace ScancodeMap {
 
         public static string GetText(int scancode) {
             Init();
-            if (ScancodeKeyMapping.TryGetValue(scancode, out var key)) {
+            if (scancode == 0) {
+                return "Disabled";
+            } else if (ScancodeKeyMapping.TryGetValue(scancode, out var key)) {
                 return key.Text;
             } else {
                 return "(unrecognized " + scancode.ToString("X2") + ")";
