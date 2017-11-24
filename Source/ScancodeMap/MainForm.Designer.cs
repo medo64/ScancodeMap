@@ -34,6 +34,7 @@
             this.mnuAppUpgrade = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuAppAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuExport = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuAdd = new System.Windows.Forms.ToolStripButton();
             this.mnuEdit = new System.Windows.Forms.ToolStripButton();
@@ -82,6 +83,7 @@
             this.mnu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuNew,
             this.mnuApp,
+            this.mnuExport,
             this.toolStripSeparator1,
             this.mnuAdd,
             this.mnuEdit,
@@ -146,6 +148,17 @@
             this.mnuAppAbout.Size = new System.Drawing.Size(206, 26);
             this.mnuAppAbout.Text = "&About";
             this.mnuAppAbout.Click += new System.EventHandler(this.mnuAppAbout_Click);
+            // 
+            // mnuExport
+            // 
+            this.mnuExport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.mnuExport.Image = global::ScancodeMap.Properties.Resources.mnuExport_16;
+            this.mnuExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mnuExport.Name = "mnuExport";
+            this.mnuExport.Size = new System.Drawing.Size(24, 24);
+            this.mnuExport.Text = "Export";
+            this.mnuExport.ToolTipText = "Export mappings as registry file.";
+            this.mnuExport.Click += new System.EventHandler(this.mnuExport_Click);
             // 
             // toolStripSeparator1
             // 
@@ -247,6 +260,7 @@
         private System.Windows.Forms.ToolStripButton mnuRemove;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton mnuApply;
+        private System.Windows.Forms.ToolStripButton mnuExport;
     }
 }
 

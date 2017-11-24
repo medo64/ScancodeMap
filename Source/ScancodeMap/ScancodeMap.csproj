@@ -73,6 +73,7 @@
     <Compile Include="KeyInputForm.Designer.cs">
       <DependentUpon>KeyInputForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistryFile.cs" />
     <Compile Include="ScancodeKey.cs" />
     <Compile Include="ScancodeMappings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

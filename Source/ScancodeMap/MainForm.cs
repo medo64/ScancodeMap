@@ -130,6 +130,14 @@ namespace ScancodeMap {
             UpdateMappings();
         }
 
+        private void mnuExport_Click(object sender, EventArgs e) {
+            using (var frm = new SaveFileDialog() { Filter = "Registry file (*.reg)|*.reg|All files (*.*)|*.*" }) {
+                if (frm.ShowDialog(this) == DialogResult.OK) {
+                    RegistryFile.Export(frm.FileName, this.Mappings.GetBytes());
+                }
+            }
+        }
+
 
         private void mnuAdd_Click(object sender, EventArgs e) {
             using (var frm = new EditForm()) {
