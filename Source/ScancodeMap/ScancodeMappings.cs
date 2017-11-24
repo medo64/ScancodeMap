@@ -76,6 +76,8 @@ namespace ScancodeMap {
 
 
         public byte[] GetBytes() {
+            if (this.ScancodeMap.Count == 0) { return new byte[0]; }
+
             var count = (this.ScancodeMap.Count + 1);
 
             var buffer = new byte[12 + count * 4];
