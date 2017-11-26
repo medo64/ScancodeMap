@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Win32;
 
 namespace ScancodeMapExec {
@@ -26,7 +26,7 @@ namespace ScancodeMapExec {
                 using (var subKey = rootKey.OpenSubKey(KeyNameSub, writable: true)) {
                     RegistryKey key = null;
                     try {
-                        key = (subKey != null) ? subKey : rootKey.CreateSubKey(KeyNameSub);
+                        key = subKey ?? rootKey.CreateSubKey(KeyNameSub);
                         if ((key.GetValue(ValueName) != null) && (key.GetValueKind(ValueName) != RegistryValueKind.Binary)) { //if wrong type, delete it first
                             key.DeleteValue(ValueName);
                         }
